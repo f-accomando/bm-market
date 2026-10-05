@@ -1,0 +1,3 @@
+version: 2026.10.05
+license: BM Community License 1.0
+about: A polygon space fighter in the style of the SNES classics: fly through the gold rings.

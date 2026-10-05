@@ -1,0 +1,3 @@
+version: 2026.10.05
+license: BM Community License 1.0
+about: An endless gothic town at night, built while you walk: hunt the beasts by lamplight, area by area.
