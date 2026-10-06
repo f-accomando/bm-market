@@ -1,3 +1,3 @@
-version: 2026.10.05
+version: 2026.10.06
 license: BM Community License 1.0, games MIT/CC0
 about: Plays .p8 cartridges; inside: Piconian (CC0), Bon Planto, Boo is missing!, Pico8Platformer (MIT).
