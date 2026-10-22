@@ -1,0 +1,4 @@
+version: 2026.10.22
+license: BM Community License 1.0
+about: bm Studio: model and paint 3D scenes with primitives, textures, lights and .bmm export.
+kind: app
