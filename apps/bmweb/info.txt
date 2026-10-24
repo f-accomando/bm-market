@@ -1,4 +1,3 @@
-version: 2026.10.22
+version: 2026.10.24
 license: BM Community License 1.0
-about: bm Web: a text web browser for HTML without JavaScript. https only, one page at a time, robots.txt respected.
-kind: app
+about: bm Web: HTML5, CSS and JavaScript browser. Mouse and keyboard UI, pad supported. https only.
