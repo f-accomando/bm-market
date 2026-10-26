@@ -1,3 +1,0 @@
-version: 2026.10.05
-license: BM Community License 1.0
-about: A gothic top-down hunt through a town of beasts; the great beast waits in the cathedral.
