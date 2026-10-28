@@ -1,0 +1,3 @@
+version: 2026.10.28
+license: BM Community License 1.0
+about: bm Assistant: offline manual, Lua API reference and project helper on the console.
