@@ -108,21 +108,23 @@ builds them and updates their folders.
 ## Projects, kits and models: `bme/`, `bmk/` and `bmm/`
 
 Three more folders sit next to `games/` and `apps/`. They are **not** in the catalog: the console does not list them in
-the Market. One folder is one item, with the file and an `info.txt`:
+the Market. In `bme/` and `bmk/` one folder is one item, with the file and an `info.txt`. `bmm/` has no sub folders: the model
+files are in the folder itself, and `bmm/about.txt` has one line for each (license and a short text):
 
 ```
 bme/herocart/herocart.bme    an editable project (.bme)
 bmk/island/island.bmk        a map kit (.bmk): map, 3D models and 2D sprites for bm SDK
-bmm/hunter/hunter.bmm        a model file (.bmm): 3D models with skeletons and clips for bm Mesh and bm Animator
+bmm/hunter.bmm               a model file (.bmm): 3D models with skeletons and clips for bm Mesh and bm Animator
 ```
 
-Install one from the Monitor of the Pi (`net fetch`, the file goes to `/bme` or `/bmk`; a name has 1 to 8 letters):
+Install one from the Monitor of the Pi (`net fetch`, the file goes to `/bme`, `/bmk` or `/bmm`; a name has 1 to 8 letters):
 
 ```
 net fetch gh:f-accomando/bm-market/bme/herocart/herocart.bme
 net fetch gh:f-accomando/bm-market/bmk/island/island.bmk
+net fetch gh:f-accomando/bm-market/bmm/hunter.bmm
 ```
 
-A `.bmm` model file goes to `/bmm` on the SD card (a name has 1 to 8 letters of `a-z`, `0-9`, `_` and `-`).
-`net fetch` does not install a `.bmm` yet: download the file from this repository and copy it to `/bmm`
-(or send it with `tools/bm_net.py`). bm Mesh and bm Animator list the files of `/bmm` in their import dialog.
+A `.bmm` model file goes to `/bmm` on the SD card (a name has 1 to 8 letters of `a-z`, `0-9`, `_` and `-`). bm Mesh and bm Animator
+list the files of `/bmm` in their import dialog. `net fetch` installs a `.bmm` since the commit "net fetch: accept a .bmm" of bm
+(a kernel built before it refuses the name: then download the file here and copy it to `/bmm`, or send it with `tools/bm_net.py`).

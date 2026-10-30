@@ -1,0 +1,5 @@
+# The model files (.bmm) of this folder: name: license | about (one line, at most 120 characters). The files are flat: no sub folders.
+# Install: net fetch gh:f-accomando/bm-market/bmm/NAME.bmm (the file goes to /bmm on the card); bm Mesh and bm Animator list it.
+hunter: BM Community License 1.0 | The Hunter, high poly: T pose, 24 bones, the saw (closed, open) and the pistol as separate models, 17 clips.
+hunterlo: BM Community License 1.0 | The Hunter, low poly (994 triangles): the same bones, weapons and 17 clips as hunter.
+enemies: BM Community License 1.0 | Dark Night enemies: villager, huntsman and rabid dog with clips (7 each), and their weapons as separate models.
