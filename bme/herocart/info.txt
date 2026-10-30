@@ -1,0 +1,3 @@
+version: 0.1
+license: BM Community License 1.0
+about: Hero Stress, the editable project (.bme): a plaza with walking heroes and a 3D benchmark panel. Install: net fetch gh:f-accomando/bm-market/bme/herocart/herocart.bme
