@@ -111,7 +111,7 @@ Three more folders sit next to `games/` and `apps/`. They are **not** in the cat
 the Market. One folder is one item, with the file and an `info.txt`:
 
 ```
-bme/islbench/islbench.bme    an editable project (.bme)
+bme/herocart/herocart.bme    an editable project (.bme)
 bmk/island/island.bmk        a map kit (.bmk): map, 3D models and 2D sprites for bm SDK
 bmm/hunter/hunter.bmm        a model file (.bmm): 3D models with skeletons and clips for bm Mesh and bm Animator
 ```
@@ -119,7 +119,7 @@ bmm/hunter/hunter.bmm        a model file (.bmm): 3D models with skeletons and c
 Install one from the Monitor of the Pi (`net fetch`, the file goes to `/bme` or `/bmk`; a name has 1 to 8 letters):
 
 ```
-net fetch gh:f-accomando/bm-market/bme/islbench/islbench.bme
+net fetch gh:f-accomando/bm-market/bme/herocart/herocart.bme
 net fetch gh:f-accomando/bm-market/bmk/island/island.bmk
 ```
 
