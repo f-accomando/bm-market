@@ -1,0 +1,3 @@
+version: 1
+license: BM Community License 1.0
+about: Clinic, a map kit (.bmk) for Dark Night: wards, a hall with a stair, an atrium, a courtyard and the gate. 80x48 tiles, 18 models. Install: net fetch gh:f-accomando/bm-market/bmk/clinic/clinic.bmk

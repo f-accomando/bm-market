@@ -1,0 +1,3 @@
+version: 1
+license: BM Community License 1.0
+about: Hunter, a 3D model file (.bmm), high poly: T pose, 24 bones, saw (closed, open) and pistol as separate models, 17 clips. Copy it to /bmm on the SD card.

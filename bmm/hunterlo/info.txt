@@ -1,0 +1,3 @@
+version: 1
+license: BM Community License 1.0
+about: Hunter, a 3D model file (.bmm), low poly (994 triangles): the same bones, weapons and 17 clips as the high poly one. Copy it to /bmm on the SD card.
