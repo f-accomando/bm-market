@@ -104,3 +104,20 @@ hand:
 The games of the bm project come from bm itself: `scripts/market.sh` there
 (or `make market-seed MARKET=../bm-market`, then commit and push here)
 builds them and updates their folders.
+
+## Projects and kits: `bme/` and `bmk/`
+
+Two more folders sit next to `games/` and `apps/`. They are **not** in the catalog: the console does not list them in
+the Market. One folder is one item, with the file and an `info.txt`:
+
+```
+bme/islbench/islbench.bme    an editable project (.bme)
+bmk/island/island.bmk        a map kit (.bmk): map, 3D models and 2D sprites for bm SDK
+```
+
+Install one from the Monitor of the Pi (`net fetch`, the file goes to `/bme` or `/bmk`; a name has 1 to 8 letters):
+
+```
+net fetch gh:f-accomando/bm-market/bme/islbench/islbench.bme
+net fetch gh:f-accomando/bm-market/bmk/island/island.bmk
+```

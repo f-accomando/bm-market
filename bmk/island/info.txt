@@ -1,0 +1,3 @@
+version: 1
+license: BM Community License 1.0
+about: Island, a map kit (.bmk): a 72x72 tile island with a campfire, 24 models, 2D sprites and the 3D map. Install: net fetch gh:f-accomando/bm-market/bmk/island/island.bmk
