@@ -1,4 +1,3 @@
-version: 2026.10.22
+version: 2026.10.31.1
 license: BM Community License 1.0
 about: bm Mesh: sculpt vertex-by-vertex 3D meshes and UV textures for .bmm and .bme projects.
-kind: app

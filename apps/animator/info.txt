@@ -1,4 +1,3 @@
-version: 2026.10.22
+version: 2026.10.31.1
 license: BM Community License 1.0
 about: bm Animator: rig and animate 3D models with bones, keyframes and walk cycles.
-kind: app
