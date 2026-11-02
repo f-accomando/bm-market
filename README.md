@@ -20,13 +20,11 @@ lists the apps in the **Apps** page of the Market.
 Open a pull request that adds one folder to `games/` (or to `apps/`):
 
 ```
-games/my-game/my-game.bm     the cartridge (a .bm for the Pi)
-games/my-game/my-game.b16    optional: a .b16 for the RGB30 (the same game, a second version)
+games/my-game/my-game.bm     the cartridge (a .bm)
 games/my-game/info.txt       version, license, about
 ```
 
-At most one `.bm` and one `.b16` per folder. The Pi lists the `.bm` games, the
-RGB30 the `.b16` ones.
+One `.bm` per folder. Its header says which kernels it is for (`targets`). Both consoles list it; the one it is not for shows a faded cover and asks OK or Cancel before it starts.
 
 - **The folder's name is the game's id**: `a-z`, `0-9` and `-`, at most 23
   characters. It never changes: the console recognises updates by it. An id
@@ -48,7 +46,7 @@ RGB30 the `.b16` ones.
   console shows and what names the save file, so keep them the same across
   versions, and two games cannot share both.
 - **Updating a game**: the same folder, the new `.bm`, a new `version`.
-- A `.bm` has no size limit of its own; GitHub refuses files over 100 MiB.
+- A `.bm` has no size limit of its own; GitHub refuses files over 100 MB.
 
 The check of the pull request (`mkmarket.py --check`) says what is wrong.
 Once the pull request is merged the catalog is built again, signed and
@@ -104,27 +102,3 @@ hand:
 The games of the bm project come from bm itself: `scripts/market.sh` there
 (or `make market-seed MARKET=../bm-market`, then commit and push here)
 builds them and updates their folders.
-
-## Projects, kits and models: `bme/`, `bmk/` and `bmm/`
-
-Three more folders sit next to `games/` and `apps/`. They are **not** in the catalog: the console does not list them in
-the Market. In `bme/` and `bmk/` one folder is one item, with the file and an `info.txt`. `bmm/` has no sub folders: the model
-files are in the folder itself, and `bmm/about.txt` has one line for each (license and a short text):
-
-```
-bme/herocart/herocart.bme    an editable project (.bme)
-bmk/island/island.bmk        a map kit (.bmk): map, 3D models and 2D sprites for bm SDK
-bmm/hunter.bmm               a model file (.bmm): 3D models with skeletons and clips for bm Mesh and bm Animator
-```
-
-Install one from the Monitor of the Pi (`net fetch`, the file goes to `/bme`, `/bmk` or `/bmm`; a name has 1 to 8 letters):
-
-```
-net fetch gh:f-accomando/bm-market/bme/herocart/herocart.bme
-net fetch gh:f-accomando/bm-market/bmk/island/island.bmk
-net fetch gh:f-accomando/bm-market/bmm/hunter.bmm
-```
-
-A `.bmm` model file goes to `/bmm` on the SD card (a name has 1 to 8 letters of `a-z`, `0-9`, `_` and `-`). bm Mesh and bm Animator
-list the files of `/bmm` in their import dialog. `net fetch` installs a `.bmm` since the commit "net fetch: accept a .bmm" of bm
-(a kernel built before it refuses the name: then download the file here and copy it to `/bmm`, or send it with `tools/bm_net.py`).

@@ -1,4 +1,3 @@
-version: 2026.10.22
+version: 2026.11.02
 license: BM Community License 1.0
-about: bm SDK: make a game on the console - code, sprites, tilemap, sound, cover and export.
-kind: app
+about: bm SDK: make a game on the console - code, sprites, tilemap, sound, cover and build.

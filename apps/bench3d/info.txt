@@ -1,0 +1,3 @@
+version: 2026.11.02
+license: BM Community License 1.0
+about: The 3D benchmark of bm3D: how many spheres, heroes, quads, sprites and map pieces the ARM and the GPU draw at 60 fps.
