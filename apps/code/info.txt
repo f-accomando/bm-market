@@ -1,3 +1,3 @@
-version: 2026.11.02
+version: 2026.11.10
 license: BM Community License 1.0
 about: bm Code: write and edit Lua scripts on the console, with syntax highlighting and live test run.
