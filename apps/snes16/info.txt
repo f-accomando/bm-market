@@ -1,0 +1,3 @@
+version: 2026.11.10
+license: BM Community License 1.0
+about: bm SNES-16: native ARM SNES-16 PPU/DSP demo with slim library. Needs latest kernel.
