@@ -1,4 +1,4 @@
-version: 0.3
+version: 2026.11.12
 license: BM Community License 1.0
-about: bm Tape: synth, drum kit, step sequencer, song tape, mixer and effects on a retro vector display. USB keyboard.
-CREDITS: Felucca-Engines (24 sounds rendered on the PC) - Leo Kuroshita, Hügelton Instruments - MIT - https://github.com/hugelton/felucca-engines
+about: bm Tape: a pocket studio with synth, drums, step sequencer and a 4-track tape. Needs a USB keyboard.
+credits: Felucca-Engines (24 sounds rendered on the PC) - Leo Kuroshita, Hügelton Instruments - MIT - https://github.com/hugelton/felucca-engines
