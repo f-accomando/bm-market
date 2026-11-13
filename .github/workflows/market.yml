@@ -1,7 +1,7 @@
 # The bm Market: checks the games and apps of a pull request; on main, builds the
 # catalog, signs it and publishes it with GitHub Pages
 # (https://f-accomando.github.io/bm-market/). The tools are bm's
-# (scripts/mkmarket.py), the public key too (keys/market-pub.pem): the
+# (core/scripts/mkmarket.py), the public key too (core/keys/market-pub.pem): the
 # signature is checked against it before anything is published.
 name: market
 
@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # the branch of bm with scripts/mkmarket.py (its main branch): the
+  # the branch of bm with core/scripts/mkmarket.py (its main branch): the
   # repository variable BM_REF, if set
   BM_REF: ${{ vars.BM_REF || 'bm-core' }}
 
@@ -34,10 +34,10 @@ jobs:
           ref: ${{ env.BM_REF }}
           path: bm
           sparse-checkout: |
-            scripts
-            keys
+            core/scripts
+            core/keys
       - name: Check the games and apps
-        run: python3 bm/scripts/mkmarket.py games --apps apps --check
+        run: python3 bm/core/scripts/mkmarket.py games --apps apps --check
 
   publish:
     needs: check
@@ -58,8 +58,8 @@ jobs:
           ref: ${{ env.BM_REF }}
           path: bm
           sparse-checkout: |
-            scripts
-            keys
+            core/scripts
+            core/keys
       # until the key is set up (README.md, "Setting it up") the games are
       # checked but nothing is published: a warning, not a failure
       - name: The key
@@ -70,8 +70,8 @@ jobs:
           if [ -z "$BM_MARKET_KEY" ]; then
             echo "::warning::no secret BM_MARKET_KEY yet: the catalog is not published (README.md, Setting it up)"
             echo "ok=false" >> "$GITHUB_OUTPUT"
-          elif ! grep -q "BEGIN PUBLIC KEY" bm/keys/market-pub.pem; then
-            echo "::warning::bm ($BM_REF) has no keys/market-pub.pem yet: the catalog is not published"
+          elif ! grep -q "BEGIN PUBLIC KEY" bm/core/keys/market-pub.pem; then
+            echo "::warning::bm ($BM_REF) has no core/keys/market-pub.pem yet: the catalog is not published"
             echo "ok=false" >> "$GITHUB_OUTPUT"
           else
             echo "ok=true" >> "$GITHUB_OUTPUT"
@@ -80,7 +80,7 @@ jobs:
         if: steps.key.outputs.ok == 'true'
         env:
           BM_MARKET_KEY: ${{ secrets.BM_MARKET_KEY }}
-        run: python3 bm/scripts/mkmarket.py games --apps apps -o site --require-key --pub bm/keys/market-pub.pem
+        run: python3 bm/core/scripts/mkmarket.py games --apps apps -o site --require-key --pub bm/core/keys/market-pub.pem
       - uses: actions/upload-pages-artifact@v5
         if: steps.key.outputs.ok == 'true'
         with:
