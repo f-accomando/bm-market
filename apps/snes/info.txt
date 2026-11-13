@@ -1,3 +1,3 @@
-version: 2026.11.13
+version: 2026.11.14
 license: BM Community License 1.0
-about: bm SNES: a Super Nintendo emulator with sound. Put .sfc or .smc files in /sfc. Needs the latest kernel.
+about: bm SNES: a Super Nintendo emulator with sound. Put .sfc or .smc files in /snes. Needs the latest kernel.
