@@ -1,2 +1,3 @@
 version: 2026.11.19
 license: BM Community License 1.0
+about: Gioco da tavolo politico-economico a turni con leggi neutrali, banca pubblica o privata e 16 token cittadino.
